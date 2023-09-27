@@ -2,10 +2,10 @@ import React from "react";
 import "./header.css";
 import person from '../images/person.avif'
 
-const Header = () => {
+const Header = ({toggleActive}) => {
   return (
     <header>
-      <a href="#" className="menu">
+      <a href="#" className="menu" onClick={toggleActive}>
         <i class="bi bi-sliders"></i>
       </a>
       <div className="userItems">
