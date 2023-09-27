@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import person from '../images/person.avif'
 
 const Header = () => {
   return (
@@ -17,7 +18,7 @@ const Header = () => {
           <span className="bag">0</span>
         </a>
         <div className="avatar">
-            <a href="#"> <img src="" alt="User Image" /></a>
+            <a href="#"> <img src={person} alt="User Image" /></a>
             <div className="user">
                 <span>User Name</span>
                 <a href="#">View Profile</a>
