@@ -1,10 +1,12 @@
 import React from 'react'
+import './main.css';
+import SideMenu from '../components/SideMenu';
 
 function Main() {
   return (
-    <div>
-      
-    </div>
+   <main>
+   <SideMenu />
+   </main>
   )
 }
 
