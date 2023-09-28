@@ -19,7 +19,7 @@ function GameCard({ game }) {
           {game.discount != 0 && (
             <>
               <span className="discount">
-                <i>{game.discount}%</i>
+                <i>{(game.discount) * 100}%</i>
               </span>
               <span className="prevPrice">€{game.price.toFixed(2)}</span>
             </>
