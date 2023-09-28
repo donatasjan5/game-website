@@ -53,7 +53,7 @@ function GameSwiper({ games }) {
                   <span className="pause">
                     <i className="bi bi-pause-fill"></i>
                   </span>
-                  <span className="paly">
+                  <span className="play">
                     <i class="bi bi-play-fill"></i>
                   </span>
                 </a>

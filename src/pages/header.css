@@ -25,7 +25,7 @@ header {
 .userItems .icon {
   position: relative;
   color: #ffffff;
-  font-style: 1.5rem;
+  font-size: 1.5rem;
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -90,4 +90,16 @@ header {
 .userItems .avatar .user a {
     text-decoration: none;
     font-size: 0.6rem;
+}
+
+.gameSlider .content .buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gameSlider .content .buttons a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
 }
