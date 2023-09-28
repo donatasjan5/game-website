@@ -91,15 +91,3 @@ header {
     text-decoration: none;
     font-size: 0.6rem;
 }
-
-.gameSlider .content .buttons {
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.gameSlider .content .buttons a {
-  text-decoration: none;
-  color: #ffffff;
-  text-transform: uppercase;
-}
