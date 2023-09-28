@@ -6,7 +6,7 @@ import 'swiper/css/navigation'
 
 import './gameSwiper.css'
 
-function GameSlide(game, active, toggleVideo) {
+function GameSlide({game, active, toggleVideo}) {
   return (
     <div className="gameSlider">
       <img src={game.img} alt="Game Image" />
@@ -32,7 +32,7 @@ function GameSlide(game, active, toggleVideo) {
               <i className="bi bi-pause-fill"></i>
             </span>
             <span className="play">
-              <i class="bi bi-play-fill"></i>
+              <i className="bi bi-play-fill"></i>
             </span>
           </a>
         </div>

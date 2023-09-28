@@ -14,8 +14,11 @@ const Home = ({ games }) => {
             <h2 className="sectionTitle">Games on promotion</h2>
           </div>
           <div className="col-lg-6">
-            View More Games <i className="bi bi-arrow-right"></i>
-          </div>
+<a href="#" className="viewMore">
+  View More Games
+<i class="bi bi-arrow-right"></i>
+</a>
+</div>
         </div>
       </div>
     </section>
