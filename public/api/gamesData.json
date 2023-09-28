@@ -6,11 +6,11 @@
         "level": "Intermediate",
         "category": "Action",
         "rating": 4.5,
-        "discount": 10,
+        "discount": 0.3,
         "price": 29.99,
         "img": "./assets/pubg.webp",
         "trailer": "https://www.youtube.com/watch?v=abcdefg12345",
-        "active": true
+        "active": false
     },
     {
         "id": 2,
@@ -19,11 +19,11 @@
         "level": "Advanced",
         "category": "Adventure",
         "rating": 4.2,
-        "discount": 5,
+        "discount": 0.5,
         "price": 39.99,
         "img": "./assets/diablo.jpg",
         "trailer": "https://www.youtube.com/watch?v=u1oqfdh4xBY&ab_channel=PUBG%3ABATTLEGROUNDS",
-        "active": true
+        "active": false
     },
     {
         "id": 3,
@@ -32,11 +32,11 @@
         "level": "Beginner",
         "category": "Simulation",
         "rating": 3.8,
-        "discount": 15,
+        "discount": 0.5,
         "price": 24.99,
         "img": "./assets/gta.jpg",
         "trailer": "https://www.youtube.com/embed/ank4yzqJ228?si=ku5PFflo54GUzqOf",
-        "active": true
+        "active": false
     },
     {
         "id": 4,
@@ -45,11 +45,11 @@
         "level": "Intermediate",
         "category": "Strategy",
         "rating": 4.0,
-        "discount": 20,
+        "discount": 0.2,
         "price": 19.99,
         "img": "./assets/diablo.jpg",
         "trailer": "https://www.youtube.com/watch?v=wxyz12345678",
-        "active": true
+        "active": false
     },
     {
         "id": 5,
@@ -62,7 +62,7 @@
         "price": 49.99,
         "img": "example_game5.jpg",
         "trailer": "https://www.youtube.com/watch?v=abcdefg12345",
-        "active": true
+        "active": false
     },
     {
         "id": 6,
@@ -71,11 +71,11 @@
         "level": "Intermediate",
         "category": "Puzzle",
         "rating": 4.3,
-        "discount": 10,
+        "discount": 0.1,
         "price": 34.99,
         "img": "./assets/diablo.jpg",
         "trailer": "https://www.youtube.com/watch?v=hijklmn67890",
-        "active": true
+        "active": false
     },
     {
         "id": 7,
@@ -84,7 +84,7 @@
         "level": "Advanced",
         "category": "Sports",
         "rating": 4.1,
-        "discount": 5,
+        "discount": 0.5,
         "price": 44.99,
         "img": "example_game7.jpg",
         "trailer": "https://www.youtube.com/watch?v=pqrstuv23456",
@@ -97,7 +97,7 @@
         "level": "Beginner",
         "category": "FPS",
         "rating": 3.9,
-        "discount": 15,
+        "discount": 0.15,
         "price": 29.99,
         "img": "example_game8.jpg",
         "trailer": "https://www.youtube.com/watch?v=wxyz12345678",
