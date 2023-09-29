@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "title": "Pubg",
         "description": "This is the description for Example Game 1.",
         "level": "Intermediate",
@@ -13,7 +13,7 @@
         "active": false
     },
     {
-        "id": 2,
+        "_id": 2,
         "title": "Diablo",
         "description": "This is the description for Example Game 2.",
         "level": "Advanced",
@@ -26,7 +26,7 @@
         "active": false
     },
     {
-        "id": 3,
+        "_id": 3,
         "title": "Grand Theft Auto V",
         "description": "This is the description for Example Game 3.",
         "level": "Beginner",
@@ -39,7 +39,7 @@
         "active": false
     },
     {
-        "id": 4,
+        "_id": 4,
         "title": "Fortnite",
         "description": "This is the description for Example Game 4.",
         "level": "Intermediate",
@@ -52,7 +52,7 @@
         "active": false
     },
     {
-        "id": 5,
+        "_id": 5,
         "title": "Among Us",
         "description": "This is the description for Example Game 5.",
         "level": "Advanced",
@@ -65,7 +65,7 @@
         "active": false
     },
     {
-        "id": 6,
+        "_id": 6,
         "title": "Cyberpunk 2077",
         "description": "This is the description for Example Game 6.",
         "level": "Intermediate",
@@ -78,7 +78,7 @@
         "active": false
     },
     {
-        "id": 7,
+        "_id": 7,
         "title": "Valorant",
         "description": "This is the description for Example Game 7.",
         "level": "Advanced",
@@ -91,7 +91,7 @@
         "active": false
     },
     {
-        "id": 8,
+        "_id": 8,
         "title": "NBA 2k23",
         "description": "This is the description for Example Game 8.",
         "level": "Beginner",
@@ -104,7 +104,7 @@
         "active": false
     },
     {
-        "id": 9,
+        "_id": 9,
         "title": "Witcher",
         "description": "This is the description for Example Game 8.",
         "level": "Beginner",

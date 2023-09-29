@@ -8,6 +8,16 @@ import SocialListItem from "./SocialListItem";
 const SideMenu = ({ active }) => {
   const [navData, setNavData] = useState(NavListData);
   const [socialData, setSocialData] = useState(SocialListData);
+
+  const handleNavOnClick = (id) => {
+    const newNavData = navData.map((nav) => {
+      nav.active = false;
+      if (nav._id === id) nav.active = true;
+      return nav;
+    });
+    setNavData(newNavData);
+  };
+
   return (
     <div className={`sideMenu ${active ? "active" : undefined}`}>
       <a href="a" className="logo">
@@ -17,16 +27,19 @@ const SideMenu = ({ active }) => {
 
       <ul className="nav">
         {navData.map((item) => (
-          <NavListItem key={item._id} item={item} />
+          <NavListItem
+            key={item._id}
+            item={item}
+            navOnClick={handleNavOnClick}
+          />
         ))}
       </ul>
 
-<ul className="social">
-  {socialData.map((item) => (
-     <SocialListItem key={item._id} item={item} />
-  ))}
-</ul>
-
+      <ul className="social">
+        {socialData.map((item) => (
+          <SocialListItem key={item._id} item={item} />
+        ))}
+      </ul>
     </div>
   );
 };
