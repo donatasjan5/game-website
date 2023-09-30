@@ -5,17 +5,18 @@ import NavListItem from "./NavListItem";
 import SocialListData from "../data/socialListData";
 import SocialListItem from "./SocialListItem";
 
-const SideMenu = ({ active }) => {
+const SideMenu = ({ active, sectionActive }) => {
   const [navData, setNavData] = useState(NavListData);
   const [socialData, setSocialData] = useState(SocialListData);
 
-  const handleNavOnClick = (id) => {
+  const handleNavOnClick = (id, target) => {
     const newNavData = navData.map((nav) => {
       nav.active = false;
       if (nav._id === id) nav.active = true;
       return nav;
     });
     setNavData(newNavData);
+    sectionActive(target)
   };
 
   return (
