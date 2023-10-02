@@ -25,6 +25,15 @@ const Categories = ({ games, reference }) => {
 
     setData(games.filter((game) => game.category === category));
   };
+
+  const [text, setText] = useState("");
+
+  const handleSearchGames = (e) => {
+    setData(games.filter(game=>game.title.toLowerCase().includes(e.target.value.toLowerCase()))
+    )
+    setText(e.target.value);
+  };
+
   return (
     <section id="categories" className="categories" ref={reference}>
       <div className="conatiner-fluid mt-2">
@@ -45,7 +54,13 @@ const Categories = ({ games, reference }) => {
           <div className="col-lg-4 flex align-items-center justify-content-end">
             <div className="search">
               <i className="bi bi-search"></i>
-              <input type="text" name="search" placeholder="Search" />
+              <input
+                type="text"
+                name="search"
+                value={text}
+                placeholder="Search"
+                onChange={handleSearchGames}
+              />
             </div>
           </div>
         </div>
