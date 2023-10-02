@@ -1,20 +1,32 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./gameCard.css";
 import GameRating from "./GameRating";
 import { AppContext } from "../App";
 
 function GameCard({ game }) {
-  const {library, setLibrary, bag, setBag} = useContext(AppContext);
+  const { library, setLibrary, bag, setBag } = useContext(AppContext);
 
-  const handleAddToLibrary = game => {
-    setLibrary([...library, game])
-  }
-  
+  const handleAddToLibrary = (game) => {
+    setLibrary([...library, game]);
+  };
+
+  const handleRemoveFromLibrary = (game) => {
+    setLibrary(library.filter((item) => item._id !== game._id));
+  };
+
   return (
     <div className="col-xl-3 col-lg-4 col-md-6">
       <div className="gameCard">
         <img src={game.img} alt={game.title} className="img-fluid" />
-        <a href="#" className="like" onClick={() => handleAddToLibrary(game)}>
+        <a
+          href="#"
+          className={`like ${library.includes(game) ? 'active' : undefined}`}
+          onClick={
+            library.includes(game)
+              ? () => handleRemoveFromLibrary(game)
+              : () => handleAddToLibrary(game)
+          }
+        >
           <i className="bi bi-heart-fill"></i>
         </a>
         <div className="gameFeature">
@@ -26,7 +38,7 @@ function GameCard({ game }) {
           {game.discount != 0 && (
             <>
               <span className="discount">
-                <i>{(game.discount) * 100}%</i>
+                <i>{game.discount * 100}%</i>
               </span>
               <span className="prevPrice">€{game.price.toFixed(2)}</span>
             </>
