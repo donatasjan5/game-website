@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
+import { AppContext } from "../App";
 import "./main.css";
 import SideMenu from "../components/SideMenu";
 import Header from "./Header";
@@ -8,6 +9,7 @@ import MyLibrary from "./MyLibrary";
 import Bag from "./Bag";
 
 function Main() {
+  const { library, bag } = useContext(AppContext);
   const [active, setActive] = useState(false);
   const [games, setGames] = useState([]);
 
@@ -43,17 +45,17 @@ function Main() {
     setActive(!active);
   };
 
-  const handleSectionActive = target => {
-    sections.map(section => {
+  const handleSectionActive = (target) => {
+    sections.map((section) => {
       if (section.ref.current) {
-      section.ref.current.classList.remove('active');
-      if(section.ref.current.id===target) {
-        section.ref.current.classList.add('active')
+        section.ref.current.classList.remove("active");
+        if (section.ref.current.id === target) {
+          section.ref.current.classList.add("active");
+        }
       }
-    }
       return section;
-    })
-  }
+    });
+  };
 
   const fetchData = () => {
     fetch("http://localhost:3000/api/gamesData.json")
@@ -74,10 +76,14 @@ function Main() {
       <div className={`banner ${active ? "active" : undefined}`}>
         <Header toggleActive={handleToggleActive} />
         <div className="conatiner-fliud">
-          <Home games={games} reference={homeRef} />
-          <Categories games={games} reference={categoriesRef} />
-          <MyLibrary games={games} reference={libraryRef} />
-          <Bag games={games} reference={bagRef} />
+          {games && games.length > 0 && (
+            <>
+              <Home games={games} reference={homeRef} />
+              <Categories games={games} reference={categoriesRef} />
+              <MyLibrary games={library} reference={libraryRef} />
+              <Bag games={bag} reference={bagRef} />
+            </>
+          )}
         </div>
       </div>
     </main>
