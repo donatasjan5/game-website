@@ -17,14 +17,14 @@ const Home = ({ games, reference }) => {
           <div className="col-lg-6 d-flex justify-content-end align-items-center">
             <a href="#" className="viewMore">
               View More Games
-              <i class="bi bi-arrow-right"></i>
+              <i className="bi bi-arrow-right"></i>
             </a>
           </div>
         </div>
         <div className="row">
           {
             games.slice(0,4).map(game=>(
-              <GameCard key={game.id} game={game} />
+              <GameCard key={game._id} game={game} />
             ))
           }
         </div>
