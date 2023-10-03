@@ -40,14 +40,15 @@ header {
 .userItems .icon .like,
 .userItems .icon .bag {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
+  right: 4px;
   font-size: 0.8rem;
   font-weight: 800;
   height: 20px;
   width: 20px;
   padding: 3px;
   color: #ffffff;
-  background: var(--second);
+  background: var(--secondary);
   border-radius: 50%;
   display: flex;
   justify-content: center;

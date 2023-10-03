@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./header.css";
+import { AppContext } from "../App";
 import person from '../images/person.avif'
 
 const Header = ({toggleActive}) => {
+  const { library, bag } = useContext(AppContext);
   return (
     <header>
       <a href="#" className="menu" onClick={toggleActive}>
@@ -11,11 +13,11 @@ const Header = ({toggleActive}) => {
       <div className="userItems">
         <a href="#" className="icon">
           <i className="bi bi-heart-fill"></i>
-          <span className="like">0</span>
+          <span className="like">{library.length}</span>
         </a>
         <a href="#" className="icon">
           <i className="bi bi-bag-fill"></i>
-          <span className="bag">0</span>
+          <span className="bag">{bag.length}</span>
         </a>
         <div className="avatar">
             <a href="#"> <img src={person} alt="User Image" /></a>
